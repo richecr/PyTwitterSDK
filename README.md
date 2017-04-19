@@ -9,7 +9,9 @@ Permiti publicar e fazer buscar no twitter.
 from biblioteca_twitter import Twitter
 
 //Coloca o consumer_Key, consumer_Secret, token_key e token_secret do twitter: (https://apps.twitter.com/app/13500222/keys) Criei uma conta.
+
 //Com as 4 chaves vc coloca nas variáveis. OBS=> Para a pessoa que usar seu aapp para ela publicar ele precisa está logada na conta dela.
+
 //O usuário não precisa saber as 4 chaves.
 
 consumer_Key = ''
