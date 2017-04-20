@@ -8,11 +8,9 @@ Permiti publicar e fazer buscar no twitter.
 
 from biblioteca_twitter import Twitter
 
-//Coloca o consumer_Key, consumer_Secret, token_key e token_secret do twitter: (https://apps.twitter.com/app/13500222/keys) Criei uma conta.
+//Coloca o consumer_Key, consumer_Secret, token_key e token_secret do twitter: (https://apps.twitter.com/app/13500222/keys) de sua conta no twitter.
 
-//Com as 4 chaves vc coloca nas variáveis. OBS=> Para a pessoa que usar seu aapp para ela publicar ele precisa está logada na conta dela.
-
-//O usuário não precisa saber as 4 chaves.
+//Com as 4 chaves vc coloca nas variáveis. OBS=> Para a pessoa que usar seu app para ela publicar ele precisa colocar as keys.
 
 consumer_Key = ''
 
@@ -33,7 +31,7 @@ publicar = twitter.novoTweet('Olá Universo')
 //Acessa o método 'search' da classe Twitter, que recebe dois parâmetros(1-Texto da pesquisa
 //2-O idioma).
 
-pesquisa = twitter.search('São Paulo', 'pt')
+pesquisa = twitter.search('Cajazeiras', 'pt')
 
 //Aqui ele imprimi o resultado da pesquisa.
 
