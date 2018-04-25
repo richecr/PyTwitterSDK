@@ -20,7 +20,7 @@
 				<li type="1"><h3>Buscar</h3></li>
 					<font color="green" size="3"<p> (1- Texto da pesquisa, 2- Idioma)</p></font>
 					<font color="green" size="3"<p> pesquisa = twitter.search('Cajazeiras', 'pt')</p></font>
-				<li type="1"><h3 font="color="green"">Imprimir o resultado da pesquisa</h3></li>
+				<li type="1"><h3>Imprimir o resultado da pesquisa</h3></li>
 					<font color="green" size="3"<p> for resultado in pesquisa:</p></font>
 					<font color="green" size="3"<p> print(resultado['text'])</p></font>
 					<font color="green" size="3"<p> print(resultado['user']['screen_name'])</p></font>	
