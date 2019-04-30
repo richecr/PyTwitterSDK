@@ -1,30 +1,64 @@
-<html>
-	<body>
-		<font size="5" face="Times" color="black">
-			<h1> Bibioteca para usar a API do TWITTER. </h1>
-			<ul><h2> Funções </h2>
-				<li> Fazer publicações no Twitter.</li>
-				<li> Fazer buscas no Twitter.</li>
-			</ul>
-			<ul><h2> Como usar? </h2>
-				<li type="1"><h3> Importar a biblioteca</h3></li>
-					<font color="green" size="3"<p> From biblioteca_twitter import Twitter</p></font>
-				<li type="1"><h3> Coloca o consumer_Key, consumer_Secret, token_key e token_secret do twitter</h3></li>
-					<font color="green" size="3"<p> link: https://apps.twitter.com/app/13500222/keys </p></font>
-				<li type="1"><h3>Colocar as keys nas variáveis</h3></li>
-					<font color="green" size="3"<p> consumer_Key, consumer_Secret, token_Key e token_Secret </p></font>
-				<li type="1"><h3>Instânciar a classe Twitter e defini seus parâmetros</h3></li>
-					<font color="green" size="3"<p> twitter = Twitter(consumer_Key, consumer_Secret, token_Key, token_Secret)</p></font>
-				<li type="1"><h3>Publicar</h3></li>
-					<font color="green" size="3"<p> publicar = twitter.novoTweet('Olá Universo')</p></font>
-				<li type="1"><h3>Buscar</h3></li>
-					<font color="green" size="3"<p> (1- Texto da pesquisa, 2- Idioma)</p></font>
-					<font color="green" size="3"<p> pesquisa = twitter.search('Cajazeiras', 'pt')</p></font>
-				<li type="1"><h3>Imprimir o resultado da pesquisa</h3></li>
-					<font color="green" size="3"<p> for resultado in pesquisa:</p></font>
-					<font color="green" size="3"<p> print(resultado['text'])</p></font>
-					<font color="green" size="3"<p> print(resultado['user']['screen_name'])</p></font>	
-			</ul>
-		</font>
-	</body>
-</html>
+# Biblioteca para usar a API do Twitter.
+> Feito em python para facilitar o uso da api do twitter para publicações e buscas no twitter.
+
+## Funções
+
+* Publicar no Twitter.
+* Buscar no Twitter.
+
+## Como usar
+
+### Importar a biblioteca:
+
+* Faça o clone do projeto: `git clone https://github.com/Rickecr/BibliotecaTwitter`.
+* Mova o arquivo `biblioteca_twitter.py` para onde está seu projeto.
+* Você precisar instalar a biblioteca `oauth2` com o comando `pip install oauth2`. 
+* Importe o arquivo para onde você vai usar: `from biblioteca_twitter import Twitter`.
+* Pronto, agora é só usar.
+
+### Credenciais:
+
+* Preencher consumer_Key, consumer_Secret, token_key e token_secret do twitter.
+~~~~ 
+from biblioteca_twitter import Twitter
+twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
+
+~~~~
+
+### Publicar um novo Twitter:
+
+~~~~
+from biblioteca_twitter import Twitter
+twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
+
+mensagem = twitter.novoTweet("Olá Twitter")
+
+~~~~
+
+### Buscar Tweets:
+
+~~~~
+from biblioteca_twitter import Twitter
+twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
+
+# Primeiro parametro => Texto a ser procurado nos tweets.
+# Segundo parametro => Idioma dos tweets.
+busca = twitter.search("Champions League", "pt")
+
+~~~~
+
+### imprimir resultado da busca de tweest:
+
+~~~~
+from biblioteca_twitter import Twitter
+twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
+
+# Primeiro parametro => Texto a ser procurado nos tweets.
+# Segundo parametro => Idioma dos tweets.
+busca = twitter.search("Champions League", "pt")
+
+print(busca['text'])
+
+print(busca['user']['screen_name'])
+
+~~~~
