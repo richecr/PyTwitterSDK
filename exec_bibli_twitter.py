@@ -1,4 +1,4 @@
-from biblioteca_twitter import Twitter
+from MyApiTwitter import Twitter
 
 consumer_Key = 'rrUDLNZVqv8DaWX6fkmNrB5V9'
 consumer_Secret = 'R20GkXiu42758yyy5pfykcswYA7Lnn9rBjhQEN25jMCPYO1YS7'

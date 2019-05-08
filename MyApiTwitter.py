@@ -27,3 +27,26 @@ class Twitter:
         objeto = json.loads(decodificar)
         tweetes = objeto['statuses']
         return tweetes
+
+    def filter(self, query):
+        query_codificada = urllib.parse.quote(query, safe='')
+        requisicao = self.cliente.request('https://stream.twitter.com/1.1/statuses/filter.json?locations=' + query_codificada)
+        decodificar = requisicao[1].decode()
+        return tweetes
+
+    def geo(self, query):
+        query_codificada = urllib.parse.quote(query, safe='')
+        requisicao = self.cliente.request('https://api.twitter.com/1.1/geo/search.json?query=' + query_codificada)
+        decodificar = requisicao[1].decode()
+        objeto = json.loads(decodificar)
+        tweets = objeto['result']['places']
+        return tweets
+
+    def show(self, query):
+        uri = 'https://api.twitter.com/1.1/statuses/show.json?id=%d' % 1125743655078322176
+        requisicao = self.cliente.request(uri)
+        decodificar = requisicao[1].decode()
+        tweets = json.loads(decodificar)
+        return tweets
+
+        
