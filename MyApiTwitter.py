@@ -40,4 +40,11 @@ class Twitter:
         decodificar = requisicao[1].decode()
         objeto = json.loads(decodificar)
         tweets = objeto['result']['places']
-        return tweets        
+        return tweets
+
+    def show(self, query):
+        uri = 'https://api.twitter.com/1.1/statuses/show.json?id=%d' % 1125743655078322176
+        requisicao = self.cliente.request(uri)
+        decodificar = requisicao[1].decode()
+        tweets = json.loads(decodificar)
+        return tweets
