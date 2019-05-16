@@ -56,6 +56,7 @@ twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
 # Primeiro parametro => Texto a ser procurado nos tweets.
 # Segundo parametro => Idioma dos tweets.
 busca = twitter.search("Champions League", "pt")
+~~~~
 
 ~~~~
 for resultado in pesquisa:
