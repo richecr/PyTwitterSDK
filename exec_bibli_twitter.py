@@ -1,10 +1,10 @@
 from MyApiTwitter import Twitter
 
-consumer_Key = 'rrUDLNZVqv8DaWX6fkmNrB5V9'
-consumer_Secret = 'R20GkXiu42758yyy5pfykcswYA7Lnn9rBjhQEN25jMCPYO1YS7'
+consumer_Key = '5seEmVC04JjQXSIQBIxPLrNsk'
+consumer_Secret = 'Zl9ZA4RDidTFbgiZZVCLolV1vzmLuWONIKPn14KLWMSTEWStDZ'
 
-token_Key = '2455702491-8jbRT6j6tLv5JHkL7WAac31ZfAAcluFRSDsWXXK'
-token_Secret = 'AuaU4YduVSXtcN1oxrbpYs0E3p3AES0xekg6lCzXEtEHW'
+token_Key = '855074511498170368-phycV4NNzwpOex7ZHg9d4Eo17N642Xd'
+token_Secret = 'rY093cMYhYccUJ8QH6zCu60nZp6tbT7EzNVgbdoPsobXu'
 
 twitter = Twitter(consumer_Key, consumer_Secret, token_Key, token_Secret)
 

@@ -48,3 +48,10 @@ class Twitter:
         decodificar = requisicao[1].decode()
         tweets = json.loads(decodificar)
         return tweets
+    
+    def retweetar(self, query):
+        url = "https://api.twitter.com/1.1/statuses/retweet/"+str(query) + ".json"
+        requisicao = self.cliente.request(url, method='POST')
+        decodificar = requisicao[1].decode()
+        objeto = json.loads(decodificar)
+        return objeto
