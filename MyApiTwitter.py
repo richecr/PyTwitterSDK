@@ -43,12 +43,23 @@ class Twitter:
         return tweets
 
     def show(self, query):
-        uri = 'https://api.twitter.com/1.1/statuses/show.json?id=%d' % 1125743655078322176
+        uri = 'https://api.twitter.com/1.1/statuses/show.json?id=%s&tweet_mode=extended' % query
         requisicao = self.cliente.request(uri)
         decodificar = requisicao[1].decode()
         tweets = json.loads(decodificar)
         return tweets
     
+    def show_lookup(self, ids):
+        tweets = []
+        for id in ids:
+            uri = 'https://api.twitter.com/1.1/statuses/show.json?id=%s&tweet_mode=extended' % id
+            requisicao = self.cliente.request(uri)
+            decodificar = requisicao[1].decode()
+            tweets = json.loads(decodificar)
+            tweets.append(tweets)
+
+        return tweets
+
     def retweetar(self, query):
         url = "https://api.twitter.com/1.1/statuses/retweet/"+str(query) + ".json"
         requisicao = self.cliente.request(url, method='POST')
