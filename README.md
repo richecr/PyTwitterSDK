@@ -1,10 +1,14 @@
 # Biblioteca para usar a API do Twitter.
-> Feito em python para facilitar o uso da api do twitter para publicações e buscas no twitter.
+> Objetivo de facilitar o uso da api do twitter.
 
 ## Funções
 
-* Publicar no Twitter.
-* Buscar no Twitter.
+* Publicar no Tweet.
+* Buscar por tweets.
+* Buscar um tweets específico.
+* Buscar tweets de uma determinada localização.
+* Filtrar tweets.
+* Retweetar um tweet.
 
 ## Como usar
 
