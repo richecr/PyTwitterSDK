@@ -65,3 +65,5 @@ for resultado in pesquisa:
     print(resultado['text'])
     print(resultado['user']['screen_name'])
 ~~~~
+
+#Hacktoberfest
