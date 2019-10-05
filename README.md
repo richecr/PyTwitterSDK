@@ -11,6 +11,7 @@
 * Retweetar um tweet.
 
 ## Como usar
+> A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, vai necessitar desses passos a seguir.
 
 ### Importar a biblioteca:
 
