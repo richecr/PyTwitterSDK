@@ -15,7 +15,7 @@
 ### Importar a biblioteca:
 
 * Faça o clone do projeto: `git clone https://github.com/Rickecr/BibliotecaTwitter`.
-* Mova o arquivo `biblioteca_twitter.py` para onde está seu projeto.
+* Mova o arquivo `MyApiTwitter.py` para onde está seu projeto.
 * Você precisar instalar a biblioteca `oauth2` com o comando `pip install oauth2`. 
 * Importe o arquivo para onde você vai usar: `from MyApiTwitter import Twitter`.
 * Pronto, agora é só usar.
