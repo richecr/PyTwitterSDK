@@ -65,3 +65,6 @@ for resultado in pesquisa:
     print(resultado['text'])
     print(resultado['user']['screen_name'])
 ~~~~
+
+## Contribuir com o projeto:
+Para contribuir é bem simples, basta seguir os passos de [CONTRIBUTING.md](https://github.com/Rickecr/BibliotecaTwitter/blob/master/CONTRIBUTING.md)
