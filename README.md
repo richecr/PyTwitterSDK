@@ -3,12 +3,12 @@
 
 ## Funções
 
-* Publicar no Tweet.
-* Buscar por tweets.
-* Buscar um tweets específico.
-* Buscar tweets de uma determinada localização.
-* Filtrar tweets.
-* Retweetar um tweet.
+* [Publicar no Tweet](https://github.com/Rickecr/BibliotecaTwitter#publicar-um-novo-twitter).
+* [Buscar por tweets](https://github.com/Rickecr/BibliotecaTwitter#buscar-tweets).
+* [Buscar um tweets específico]().
+* [Buscar tweets de uma determinada localização]().
+* [Filtrar tweets]().
+* [Retweetar um tweet]().
 
 ## Como usar
 > A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, vai necessitar desses passos a seguir.
