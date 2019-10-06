@@ -2,7 +2,7 @@ import oauth2
 import urllib.parse
 import json
 
-class Twitter:
+class PyTwitter:
 
     def __init__(self, consumer_key, consumer_secret, token_key, token_secret):
         self.conexao(consumer_key, consumer_secret, token_key, token_secret)
@@ -32,7 +32,9 @@ class Twitter:
         query_codificada = urllib.parse.quote(query, safe='')
         requisicao = self.cliente.request('https://stream.twitter.com/1.1/statuses/filter.json?locations=' + query_codificada)
         decodificar = requisicao[1].decode()
-        return tweetes
+        objeto = json.loads(decodificar)
+        tweets = objeto['result']['places']
+        return tweets
 
     def geo(self, query):
         query_codificada = urllib.parse.quote(query, safe='')
