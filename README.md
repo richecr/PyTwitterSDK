@@ -37,7 +37,7 @@ from MyApiTwitter import Twitter
 twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
 
 mensagem = twitter.novoTweet("Olá Twitter")
-
+   
 ~~~~
 
 ### Buscar Tweets:
