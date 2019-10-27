@@ -25,7 +25,7 @@ Na página do [projeto](https://github.com/Rickecr/BibliotecaTwitter), você pod
 
 Na página inicial do [repositório](https://github.com/Rickecr/BibliotecaTwitter) tem um botão `Fork`. Ao clicar é só esperar concluir o fork. E então ele irá criar o repositório na sua conta. E agora é só clonar em sua máquina, assim:
 
-```sh
+```bash
 git clone https://github.com/<nome_de_usuario>/BibliotecaTwitter
 ```
 
@@ -33,19 +33,19 @@ Ao concluir, você terá o repositório em seu computador e então é só abrir 
 
 Ao terminar suas modificações, você deve commitar suas alterações, mas primeiro:
 
-```sh
+```bash
 git add .
 ```
 
 O comando acima irá preparar todos os arquivos modificados para serem commitados(você deve estar dentro da pasta do projeto para usar o comando). Agora é só commitar as alterações:
 
-```sh
+```bash
 git commit -m "<Sua_Mensagem>"
 ```
 
 E por fim, você irá enviar as alterações para o repositório remoto:
 
-```sh
+```bash
 git push origin master
 ```
 
@@ -62,6 +62,3 @@ Na página do seu fork irá aparecer uma mensagem em amarelo solicitando que voc
 - Descreva suas modificações
 
 - Espere pela avaliação da sua PR, e pode ocorrer de pedimos algumas alterações a seres feitas
-
-
-
