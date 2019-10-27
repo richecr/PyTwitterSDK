@@ -1,4 +1,4 @@
-# Biblioteca para usar a API do Twitter.
+# Biblioteca para facilitar o uso da API do Twitter
 > Objetivo de facilitar o uso da api do twitter.
 
 ## Funções
@@ -24,37 +24,35 @@
 ### Credenciais:
 
 * Preencher consumer_Key, consumer_Secret, token_key e token_secret do twitter.
-~~~~ 
+
+~~~~python
 from MyApiTwitter import Twitter
 twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
-
 ~~~~
 
 ### Publicar um novo Twitter:
 
-~~~~
+~~~~python
 from MyApiTwitter import Twitter
 twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
 
 mensagem = twitter.novoTweet("Olá Twitter")
-
 ~~~~
 
 ### Buscar Tweets:
 
-~~~~
+~~~~python
 from MyApiTwitter import Twitter
 twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
 
 # Primeiro parametro => Texto a ser procurado nos tweets.
 # Segundo parametro => Idioma dos tweets.
 busca = twitter.search("Champions League", "pt")
-
 ~~~~
 
 ### imprimir resultado da busca de tweest:
 
-~~~~
+~~~~python
 from MyApiTwitter import Twitter
 twitter = Twitter(consumer_key, consumer_secret, token_key, token_secret)
 
