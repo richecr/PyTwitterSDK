@@ -11,10 +11,10 @@ token_Secret = 'AuaU4YduVSXtcN1oxrbpYs0E3p3AES0xekg6lCzXEtEHW'
 
 twitter = PyTwitter(consumer_Key, consumer_Secret, token_Key, token_Secret)
 
-print(twitter.search("flamengo", "pt-br", "extended")[0])
+# print(twitter.search("flamengo", "pt-br", "extended")[0])
 
-# twitter.search("Flamengo", "pt-br")
-# publicar = twitter.tweet('Olá Mundo')
+publicar = twitter.novoTweet('Olá Mundo')
+print(publicar)
 
 # pesquisa = twitter.search('São Paulo', 'pt')
 
