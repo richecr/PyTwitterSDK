@@ -13,9 +13,12 @@ twitter = PyTwitter(consumer_Key, consumer_Secret, token_Key, token_Secret)
 
 # print(twitter.search("flamengo", "pt-br", "extended")[0])
 
-publicar = twitter.novoTweet('Olá Mundo')
-print(publicar)
+# publicar = twitter.novoTweet('Olá Mundo')
+# print(publicar)
 
+t = twitter.geo("campina grande")
+
+print(t[10])
 # pesquisa = twitter.search('São Paulo', 'pt')
 
 # for resultado in pesquisa:

@@ -22,20 +22,11 @@ class PyTwitter:
         tweetes = response['statuses']
         return tweetes
 
-    def filter(self, query):
-        query_codificada = urllib.parse.quote(query, safe='')
-        requisicao = self.cliente.request('https://stream.twitter.com/1.1/statuses/filter.json?locations=' + query_codificada)
-        decodificar = requisicao[1].decode()
-        objeto = json.loads(decodificar)
-        tweets = objeto['result']['places']
-        return tweets
-
     def geo(self, query):
         query_codificada = urllib.parse.quote(query, safe='')
-        requisicao = self.cliente.request('https://api.twitter.com/1.1/geo/search.json?query=' + query_codificada)
-        decodificar = requisicao[1].decode()
-        objeto = json.loads(decodificar)
-        tweets = objeto['result']['places']
+        response = requests.get('https://api.twitter.com/1.1/geo/search.json?query=' + query_codificada, auth=self.auth)
+        response = response.json()
+        tweets = response['result']['places']
         return tweets
 
     def show(self, query):
@@ -62,3 +53,11 @@ class PyTwitter:
         decodificar = requisicao[1].decode()
         objeto = json.loads(decodificar)
         return objeto
+    
+    def filter(self, query):
+        query_codificada = urllib.parse.quote(name, safe='')
+        response = requests.post('https://stream.twitter.com/1.1/statuses/filter.json?locations=' + query_codificada, auth=self.auth, stream=True)
+        print(response)
+        response = response.json()
+        tweets = response['result']['places']
+        return tweets
