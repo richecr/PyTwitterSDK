@@ -1,16 +1,13 @@
-import oauth2
 import urllib.parse
-import json
+import json, requests
+from requests_oauthlib import OAuth1
 
 class PyTwitter:
-
     def __init__(self, consumer_key, consumer_secret, token_key, token_secret):
         self.conexao(consumer_key, consumer_secret, token_key, token_secret)
 
     def conexao(self, consumer_key, consumer_secret, token_key, token_secret):
-        self.consumer = oauth2.Consumer(consumer_key, consumer_secret)
-        self.token = oauth2.Token(token_key, token_secret)
-        self.cliente = oauth2.Client(self.consumer, self.token)
+        self.auth = OAuth1(consumer_key, consumer_secret, token_key, token_secret)
 
     def novoTweet(self, novo_tweet):
         query_codificada = urllib.parse.quote(novo_tweet, safe='')  # Para pesquisar com sinais(ex: #, acentos etc).
@@ -20,12 +17,11 @@ class PyTwitter:
         objeto = json.loads(decodificar)
         return objeto
 
-    def search(self, query, lang):
+    def search(self, query, lang="pt-br", tweet_mode=""):
         query_codificada = urllib.parse.quote(query, safe='')  # Para pesquisar com sinais(ex: #, acentos etc).
-        requisicao = self.cliente.request('https://api.twitter.com/1.1/search/tweets.json?q=' + query_codificada + '&lang=' + lang)
-        decodificar = requisicao[1].decode()
-        objeto = json.loads(decodificar)
-        tweetes = objeto['statuses']
+        response = requests.get('https://api.twitter.com/1.1/search/tweets.json?q=' + query_codificada + '&tweet_mode=' + tweet_mode + '&lang=' + lang, auth=self.auth)
+        response = response.json()
+        tweetes = response['statuses']
         return tweetes
 
     def filter(self, query):
