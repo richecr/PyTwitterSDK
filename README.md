@@ -24,8 +24,8 @@ twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 
 ### Funções
 
-* [Publicar no Tweet](https://github.com/Rickecr/BibliotecaTwitter#publicar-um-novo-twitter).
-* [Buscar por tweets](https://github.com/Rickecr/BibliotecaTwitter#buscar-tweets).
+* [Publicar no Tweet](#publicar-um-novo-twitter).
+* [Buscar por tweets](#buscar-tweets).
 * [Buscar um tweets específico]().
 * [Buscar tweets de uma determinada localização]().
 * [Filtrar tweets]().
