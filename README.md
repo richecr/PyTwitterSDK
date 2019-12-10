@@ -2,16 +2,8 @@
 > Objetivo de facilitar o uso da api do twitter.
 
 ## Como usar
-> A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, vai necessitar desses passos a seguir.
 
-### Funções
-
-* [Publicar no Tweet](https://github.com/Rickecr/BibliotecaTwitter#publicar-um-novo-twitter).
-* [Buscar por tweets](https://github.com/Rickecr/BibliotecaTwitter#buscar-tweets).
-* [Buscar um tweets específico]().
-* [Buscar tweets de uma determinada localização]().
-* [Filtrar tweets]().
-* [Retweetar um tweet]().
+A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, vai necessitar desses passos a seguir.
 
 ### Importar a biblioteca:
 
@@ -29,6 +21,15 @@
 from PyTwitter import PyTwitter
 twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 ~~~~
+
+### Funções
+
+* [Publicar no Tweet](https://github.com/Rickecr/BibliotecaTwitter#publicar-um-novo-twitter).
+* [Buscar por tweets](https://github.com/Rickecr/BibliotecaTwitter#buscar-tweets).
+* [Buscar um tweets específico]().
+* [Buscar tweets de uma determinada localização]().
+* [Filtrar tweets]().
+* [Retweetar um tweet]().
 
 ### Publicar um novo Twitter:
 
@@ -48,21 +49,6 @@ twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 # Primeiro parametro => Texto a ser procurado nos tweets.
 # Segundo parametro => Idioma dos tweets.
 busca = twitter.search("Champions League", "pt")
-~~~~
-
-### imprimir resultado da busca de tweest:
-
-~~~~python
-from PyTwitter import PyTwitter
-twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
-
-# Primeiro parametro => Texto a ser procurado nos tweets.
-# Segundo parametro => Idioma dos tweets.
-busca = twitter.search("Champions League", "pt")
-
-for resultado in pesquisa:
-    print(resultado['text'])
-    print(resultado['user']['screen_name'])
 ~~~~
 
 ## Contribuir com o projeto:
