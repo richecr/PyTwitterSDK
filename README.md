@@ -1,11 +1,12 @@
 # PyTwitter
-> Objetivo de facilitar o uso da api do twitter.
+> Objetivo de facilitar o uso da API do twitter.
 
-## Como usar
+### Instalação:
 
-A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, vai necessitar desses passos a seguir.
+A biblioteca ainda não se encontra para ser baixada por meio do `pip` ou de outro gerenciador de pacotes python.
+Mas pode ser utilizada da seguinte maneira:
 
-### Importar a biblioteca:
+#### Importar a biblioteca:
 
 * Faça o clone do projeto: `git clone https://github.com/Rickecr/BibliotecaTwitter`.
 * Mova o arquivo `PyTwitter.py` para onde está seu projeto.
@@ -13,9 +14,9 @@ A biblioteca não se encontra no PyPI, então para usar em um de seus projetos, 
 * Importe o arquivo para onde você vai usar: `from PyTwitter import PyTwitter`.
 * Pronto, agora é só usar.
 
-### Credenciais:
+### Primeira coisa a fazer: Preencher suas credenciais
 
-* Preencher consumer_Key, consumer_Secret, token_key e token_secret do twitter.
+* Preencher `consumer_Key`, `consumer_Secret`, `token_key` e `token_secret` do twitter.
 
 ~~~~python
 from PyTwitter import PyTwitter
