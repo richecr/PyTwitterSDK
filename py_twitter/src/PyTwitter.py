@@ -2,7 +2,7 @@ import urllib.parse
 import json
 import requests
 from requests_oauthlib import OAuth1
-from constants import api
+from .constants import api
 
 class PyTwitter:
     def __init__(self, consumer_key, consumer_secret, token_key, token_secret):
