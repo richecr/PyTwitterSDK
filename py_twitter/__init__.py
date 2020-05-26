@@ -1,1 +1,1 @@
-from .PyTwitter import PyTwitter
+from .src.PyTwitter import PyTwitter
