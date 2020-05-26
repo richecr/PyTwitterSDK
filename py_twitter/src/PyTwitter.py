@@ -2,12 +2,12 @@ import urllib.parse
 import json
 import requests
 from requests_oauthlib import OAuth1
-
+from constants import api
 
 class PyTwitter:
     def __init__(self, consumer_key, consumer_secret, token_key, token_secret):
-        self.base_uri = "https://api.twitter.com/1.1"
-        self.base_uri_stream = "https://stream.twitter.com/1.1"
+        self.base_uri = api.URI_BASE
+        self.base_uri_stream = api.URI_BASE_STREAM
         self.auth = self.conexao(consumer_key, consumer_secret, token_key, token_secret)
 
     def conexao(self, consumer_key, consumer_secret, token_key, token_secret):
