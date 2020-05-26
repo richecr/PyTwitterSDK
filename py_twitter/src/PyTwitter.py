@@ -28,20 +28,12 @@ class PyTwitter:
         tweetes = response['statuses']
         return tweetes
 
-    def geo(self, query):
-        query_codificada = urllib.parse.quote(query, safe='')
-        uri = self.base_uri + '/geo/search.json?query=' + query_codificada
-        response = requests.get(uri, auth=self.auth)
-        response = response.json()
-        tweets = response['result']['places']
-        return tweets
-
     def show(self, query):
         uri = self.base_uri + '/statuses/show.json?id=%s&tweet_mode=extended' % query
         response = requests.get(uri, auth=self.auth)
         tweet = response.json()
         return tweet
-    
+
     def show_lookup(self, ids):
         tweets = []
         for id in ids:
@@ -51,7 +43,7 @@ class PyTwitter:
         return tweets
 
     def retweetar(self, query):
-        uri = self.base_uri + "/statuses/retweet/"+str(query) + ".json"
+        uri = self.base_uri + "/statuses/retweet/" + str(query) + ".json"
         response = requests.post(uri, auth=self.auth)
         tweet = response.json()
         return tweet
@@ -60,7 +52,20 @@ class PyTwitter:
         query_codificada = urllib.parse.quote(query, safe='')
         uri = self.base_uri_stream + '/statuses/filter.json?track=' + query_codificada
         response = requests.post(uri, auth=self.auth, stream=True)
-        print(response)
+        response = response.json()
+        tweets = response['result']['places']
+        return tweets
+    
+    def get_followers(self):
+        uri = self.base_uri + "/followers/list.json"
+        response = requests.get(uri, auth=self.auth)
+        tweets = response.json()
+        return tweets
+
+    def geo(self, query):
+        query_codificada = urllib.parse.quote(query, safe='')
+        uri = self.base_uri + '/geo/search.json?query=' + query_codificada
+        response = requests.get(uri, auth=self.auth)
         response = response.json()
         tweets = response['result']['places']
         return tweets
