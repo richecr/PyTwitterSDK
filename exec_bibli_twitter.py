@@ -1,5 +1,6 @@
 from py_twitter import PyTwitter
-import json, requests
+import json
+import requests
 
 with open('keys.json', 'r') as json_file:
     keys = json.load(json_file)
@@ -13,7 +14,9 @@ token_Secret = keys['token_Secret']
 twitter = PyTwitter(consumer_Key, consumer_Secret, token_Key, token_Secret)
 
 # Todos os tweets com a hastag.
-tweets = twitter.search(query="#fiscalCovidbr", tweet_mode="extended")
+tweets = twitter.search(query="real madrid")
+
+print(tweets[0])
 
 # Pegando apenas o texto(completo) do tweet.
 tweets = map(lambda tweet: tweet['full_text'], tweets)
