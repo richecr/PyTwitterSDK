@@ -1,57 +1,78 @@
 # Contributing
-> Pode contribuir a vontade, você será sempre bem-vindo. Mas aqui tem algumas regras para serem seguidas.
 
-## Adicionar/Atualizar funcionalidades
+> You can contribute at will, you will always be welcome. But here are some rules to follow.
 
-Você olhou a aplicação e pensou em alguma funcionalidade que deveria ser adicionada no projeto ? :open_mouth:
+## Add/update features:
 
-***Então, você tem duas opções:***
+Did you look at the application and think about some functionality that should be added to the project ? :open_mouth:
 
-- [Abrir uma issue detalhando sua ideia](#criando-uma-issue)
-- [Você mesmo implementar a funcionalidade](#contribuir-com-implementação)
+**_So, you have two options:_**
 
-## Criando uma issue
+- [Open an issue detailing your idea](#open-issue)
+- [You implement the functionality yourself](#clone-the-repository)
 
-Na página do [projeto](https://github.com/Rickecr/BibliotecaTwitter), você pode clicar no botão `Issues` e na página irá aparecer um botão `new issue`, então é só selecionar e seguir os seguintes passos:
+## Open issue:
 
-- Selecione o tipo da sua issue: `Bug ou Feature`.
-- Dê um bom nome a sua issue.
-- Detalhe bem sobre qual objetivo da issue.
-- Imagens caso possível.
-- Selecione labels para sua issue.
-- Por fim, clique em `Submit new issue`.
+On the [project](https://github.com/Rickecr/PyTwitter) page, you can click on the `Issues` button and a`new issue` button will appear on the page, then just select and follow the following steps:
 
-## Clonar o repositório
+- Select the type of your issue: `Bug ou Feature`.
+- Give your issue a good name
+- Detail very well about the purpose of the issue.
+- Images if possible.
+- Select labels for your issue.
+- Finaly, click on `Submit new issue`.
 
-Na página inicial do [repositório](https://github.com/Rickecr/BibliotecaTwitter) tem um botão `Fork`. Ao clicar é só esperar concluir o fork. E então ele irá criar o repositório na sua conta. E agora é só clonar em sua máquina, assim:
+## Clone the repository:
 
-```bash
-git clone https://github.com/<nome_de_usuario>/BibliotecaTwitter
+On the home page of the [repository](https://github.com/Rickecr/PyTwitter) there is a `Fork` button. When you click, just wait to complete the fork. And then it will create the repository in your account. And now just clone in your machine, this:
+
+```sh
+git clone https://github.com/<name_user>/PyTwitter
 ```
 
-Ao concluir, você terá o repositório em seu computador e então é só abrir em seu editor preferido e fazer suas modificações.
+When finished, you will have the repository on your computer and then just open in your preferred editor and make your changes.
 
-Ao terminar suas modificações, você deve commitar suas alterações, mas primeiro:
+Before you should create your branch for your development:
 
-```bash
+```sh
+git checkout -b <name_branch>
+```
+
+For the name of the branch use the number of the issue to facilitate, ex: `issue_17`.
+
+And now can begin the development :smiley: .
+
+When you have finished make your changes, you should commit your changes, but first:
+
+```sh
 git add .
 ```
 
-O comando acima irá preparar todos os arquivos modificados para serem commitados(você deve estar dentro da pasta do projeto para usar o comando). Agora é só commitar as alterações:
+The above command will prepare all modified files to be committed, going through all the changes that were made by you where you will decide if the change will be added(you must be inside the project folder to use the command).
+Now just commit the changes:
 
-```bash
-git commit -m "<Sua_Mensagem>"
+```sh
+git commit -m "<Your_message>"
 ```
 
-E por fim, você irá enviar as alterações para o repositório remoto:
+Remember to use message clear. If what you're solving already has an issue open, reference issue in commit.
+Ex: `git commit -m "#17 - Add contributing.md"`
 
-```bash
-git push origin master
+And finally, you will submit the changes to the remote repository:
+
+```sh
+git push --set-upstream origin <name_branch>
 ```
 
-Mas isso só irá alterar no seu fork, o repositório oficial não vai ter suas alterações e agora ? :confused:
+This is only the first time that submit a new branch to the remote repository, next times, just:
 
-Calma, agora que entra o `Pull Request` ou `PR`
+```sh
+git push
+```
+
+But that will only in your fork, the official repository will not have its changes now what ? :confused:
+
+Calm down, now that the `Pull Request` ou `PR`
 
 ### Fazendo uma Pull Request
 

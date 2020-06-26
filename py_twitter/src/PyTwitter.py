@@ -10,14 +10,14 @@ class PyTwitter:
     def __init__(self, consumer_key, consumer_secret, token_key, token_secret):
         self.base_uri = api.URI_BASE
         self.base_uri_stream = api.URI_BASE_STREAM
-        self.auth = self.conexao(
+        self.auth = self.connection(
             consumer_key, consumer_secret, token_key, token_secret)
 
-    def conexao(self, consumer_key, consumer_secret, token_key, token_secret):
+    def connection(self, consumer_key, consumer_secret, token_key, token_secret):
         return OAuth1(consumer_key, consumer_secret, token_key, token_secret)
 
-    def novoTweet(self, novo_tweet):
-        query_codificada = urllib.parse.quote(novo_tweet, safe='')
+    def post_tweet(self, new_tweet):
+        query_codificada = urllib.parse.quote(new_tweet, safe='')
         params = {
             'status': query_codificada
         }

@@ -1,69 +1,68 @@
 # PyTwitter
 
-> Objetivo de facilitar o uso da API do twitter.
+> Objective to facilitate the use of the twitter API.
 
-## [API do Twitter](https://developer.twitter.com/en/docs):
+## [Twitter API](https://developer.twitter.com/en/docs):
 
-> A API do twitter tem diversas funcionalidades. Você pode dar uma olhada e sugerir implementar alguma funcionalidade na biblioteca.
+> The twitter API has several features. You can take a look and suggest implementing some functionality in the library.
 
-### Instalação:
+### Install:
 
-A biblioteca ainda não se encontra para ser baixada por meio do `pip` ou de outro gerenciador de pacotes python.
-Mas pode ser utilizada da seguinte maneira:
+The library is not yet to be downloaded via `pip` or another python package manager. But it can be used as follows:
 
-#### Importar a biblioteca:
+#### Import the library:
 
-- Faça o clone do projeto: `git clone https://github.com/Rickecr/BibliotecaTwitter`.
-- Mova o arquivo `PyTwitter.py` para onde está seu projeto.
-- Você precisar instalar a biblioteca `oauth2` com o comando `pip install oauth2`.
-- Importe o arquivo para onde você vai usar: `from PyTwitter import PyTwitter`.
-- Pronto, agora é só usar.
+- Clone the project: `git clone https://github.com/Rickecr/PyTwitter`.
+- Move the `PyTwitter.py` file to where your project.
+- Install library dependencies: `pip install -r requirements.txt`
+- Import the file `from PyTwitter import PyTwitter`.
+- Okay, now just use it.
 
-### Primeira coisa a fazer: Preencher suas credenciais
+### Credentials:
 
-- Preencher `consumer_Key`, `consumer_Secret`, `token_key` e `token_secret` do twitter.
+- Fill `consumer_Key`, `consumer_Secret`, `token_key` and `token_secret` of twitter.
 
 ```python
 from PyTwitter import PyTwitter
 twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 ```
 
-### Funções
+### Functions:
 
-- [Publicar no Tweet](#publicar-um-novo-twitter).
-- [Buscar por tweets](#buscar-tweets).
-- [Buscar um tweets específico]().
-- [Buscar tweets de uma determinada localização]().
-- [Filtrar tweets]().
-- [Retweetar um tweet]().
+- [Post a tweet](#post-to-tweet).
+- [Search for tweets](#search-for-tweets).
+- [Search for a specific tweet]().
+- [Search for tweets from a specific location]().
+- [Filter tweets]().
+- [Retweet a tweet]().
 
-### Publicar um novo Twitter:
+### Post to tweet:
 
 ```python
 from PyTwitter import PyTwitter
 twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 
-mensagem = twitter.novoTweet("Olá Twitter")
+mensagem = twitter.post_tweet("Hello twitter")
 ```
 
-### Buscar Tweets:
+### Search for tweets:
 
 ```python
 from py_twitter import PyTwitter
 twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
 
 
-# Buscar os tweets.
+# Search for tweets
 tweets = twitter.search(query="real madrid", lang="pt-br", tweet_mode="extended")
 
-# Imprime todos os tweets
+# Print all tweets
 print(tweets)
 
-# Imprime o primeiro tweet
+# Print the first Tweet
 print(tweets[0])
 
 ```
 
-## Contribuir com o projeto:
+## Contributing:
 
-Para contribuir é bem simples, basta seguir os passos de [CONTRIBUTING.md](https://github.com/Rickecr/BibliotecaTwitter/blob/master/CONTRIBUTING.md)
+To contribute is very simple, just follow the steps of [CONTRIBUTING.md](https://github.com/Rickecr/BibliotecaTwitter/blob/master/CONTRIBUTING.md)
