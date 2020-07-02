@@ -1,10 +1,8 @@
 # PyTwitter
 
-> Objective to facilitate the use of the twitter API.
+> Facilitate the use of the Twitter API
 
-## [Twitter API](https://developer.twitter.com/en/docs):
-
-> The twitter API has several features. You can take a look and suggest implementing some functionality in the library.
+The [Twitter API](https://developer.twitter.com/en/docs) has several features. You can take a look and suggest implementing some functionality in the library.
 
 ### Install:
 
