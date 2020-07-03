@@ -10,6 +10,21 @@ class PyTwitter:
         self.api = API(consumer_key, consumer_secret, token_key, token_secret)
 
     def post_tweet(self, new_tweet):
+        """
+        Method that perform a post of tweet.
+
+        Params:
+        ----------
+        new_tweet : String
+
+            - Text of tweet.
+
+        Return:
+        ----------
+        response : Dict
+
+            - Information of tweet published
+        """
         params = {
             'status': new_tweet
         }
@@ -18,6 +33,27 @@ class PyTwitter:
         return response
 
     def search(self, query, **kwargs):
+        """
+        Method that perform search for tweets.
+
+        Params:
+        ----------
+        query : String
+
+            - Text of tweet.
+        lang : String
+
+            - Language of tweets.
+        tweet_mode : String
+
+            - Tweet text mode.
+
+        Return:
+        ----------
+        tweets : List
+
+            - List of tweets found.
+        """
         lang = kwargs.get('lang', 'pt-br')
         tweet_mode = kwargs.get('tweet_mode', 'extended')
         params = {
@@ -27,10 +63,28 @@ class PyTwitter:
         }
 
         response = self.api.get('search/tweets.json', params)
-        tweetes = response['statuses']
-        return tweetes
+        tweets = response['statuses']
+        return tweets
 
     def show(self, id_tweet, **kwargs):
+        """
+        Method that searches for a specific tweet.
+
+        Params:
+        ----------
+        id_tweet : String
+
+            - ID of tweet.
+        tweet_mode : String
+
+            - Tweet text mode.
+
+        Return:
+        ----------
+        response : Dic
+
+            - Tweet found.
+        """
         tweet_mode = kwargs.get('tweet_mode', 'extended')
         params = {
             'id': id_tweet,
@@ -41,6 +95,24 @@ class PyTwitter:
         return response
 
     def show_lookup(self, ids):
+        """
+        Method that searches for multiple tweets by id.
+
+        Params:
+        ----------
+        ids : List
+
+            - List of tweet ids.
+        tweet_mode : String
+
+            - Tweet text mode.
+
+        Return:
+        ----------
+        tweets : List
+
+            - List of tweets found.
+        """
         tweets = []
         for id in ids:
             tweet = self.show(id)
@@ -49,6 +121,24 @@ class PyTwitter:
         return tweets
 
     def retweet(self, id_tweet, **kwargs):
+        """
+        Method that searches for multiple tweets by id.
+
+        Params:
+        ----------
+        id_tweet : List
+
+            - ID of tweet.
+        trim_user : String
+
+            - Return data about users (False) or just the ID (True)
+
+        Return:
+        ----------
+        response : Dict
+
+            - Tweet retwweted.
+        """
         trim_user = kwargs.get('trim_user', True)
         params = {
             'trim_user': ParamsUtils.format_params_booleans(trim_user)
@@ -59,6 +149,21 @@ class PyTwitter:
         return response
 
     def filter_tweets(self, **kwargs):
+        """
+        Method that filters tweets.
+
+        Params:
+        ----------
+        track : String
+
+            - Filtering options
+
+        Return:
+        ----------
+        tweets : Dict
+
+            - Filtered tweets.
+        """
         track = kwargs.get('track', '')
         params = {
             'track': track,
@@ -68,8 +173,34 @@ class PyTwitter:
         tweets = response['result']['places']
         return tweets
 
-    def get_followers(self, **kwargs):
-        user_id = kwargs.get('user_id', '')
+    def get_followers(self, user_id, **kwargs):
+        """
+        Method that fetches a user's followers.
+
+        Params:
+        ----------
+        user_id : String
+
+            - ID of user.
+        cursor : String
+
+            - For results to be divided into pages.
+        count : String
+
+            - Number of users returned per page.
+        skip_status : String
+
+            - Whether to remove user status or not.
+        include_user_entities : String
+
+            - The user object entities node will not be included when set to false.
+
+        Return:
+        ----------
+        response : List
+
+            - List of users(followers).
+        """
         cursor = kwargs.get('cursor', -1)
         count = kwargs.get('count', 20)
         skip_status = kwargs.get('skip_status', '')
@@ -87,6 +218,21 @@ class PyTwitter:
         return response
 
     def geo(self, query):
+        """
+        Method that perform search for tweets by geolocation.
+
+        Params:
+        ----------
+        query : String
+
+            - To search for places by name.
+
+        Return:
+        ----------
+        tweets : List
+
+            - List of tweets found.
+        """
         params = {
             'query': query,
         }
