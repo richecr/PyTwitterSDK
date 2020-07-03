@@ -74,12 +74,12 @@ But that will only in your fork, the official repository will not have its chang
 
 Calm down, now that the `Pull Request` ou `PR`
 
-### Fazendo uma Pull Request
+### Pull Request
 
-Na página do seu fork irá aparecer uma mensagem em amarelo solicitando que você faça uma Pull Request para o repositório original. Ao clicar irá abrir uma página para você preencher as informações sobre sua PR.
+On your fork page, a yellow message will appear asking you to make a Pull request to the original repository. Clicking will open a page for you to fill in information about your PR.
 
-- Referencie a issue em que você está trabalhando usando `#<numero_da_issue>`
+- Reference the issue in that you are working on using: `#<number_issue>`
 
-- Descreva suas modificações
+- Describe your changes.
 
-- Espere pela avaliação da sua PR, e pode ocorrer de pedimos algumas alterações a seres feitas
+- Wait by evaluation of your PR, and it may happen that we ask for some changes to be made. 

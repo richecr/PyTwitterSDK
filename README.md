@@ -1,10 +1,7 @@
 # PyTwitter
+Facilitate the use of the Twitter API
 
-> Objective to facilitate the use of the twitter API.
-
-## [Twitter API](https://developer.twitter.com/en/docs):
-
-> The twitter API has several features. You can take a look and suggest implementing some functionality in the library.
+The [Twitter API](https://developer.twitter.com/en/docs) has several features. You can take a look and suggest implementing some functionality in the library.
 
 ### Install:
 
@@ -13,8 +10,8 @@ The library is not yet to be downloaded via `pip` or another python package mana
 #### Import the library:
 
 - Clone the project: `git clone https://github.com/Rickecr/PyTwitter`.
-- Move the `PyTwitter.py` file to where your project.
 - Install library dependencies: `pip install -r requirements.txt`
+- Move the `PyTwitter.py` file to where your project.
 - Import the file `from PyTwitter import PyTwitter`.
 - Okay, now just use it.
 
