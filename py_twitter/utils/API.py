@@ -1,6 +1,6 @@
-import requests
 from requests_oauthlib import OAuth1
 from ..constants import api
+import requests
 
 
 class API:
