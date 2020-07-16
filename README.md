@@ -60,6 +60,18 @@ print(tweets[0])
 
 ```
 
+### Search for a specific tweet
+> TODO
+
+### Search for tweets from a specific location
+> TODO
+
+### Filter tweets
+> TODO
+
+### Retweet a tweet
+> TODO
+
 ## Contributing:
 
 To contribute is very simple, just follow the steps of [CONTRIBUTING.md](https://github.com/Rickecr/BibliotecaTwitter/blob/master/CONTRIBUTING.md)
