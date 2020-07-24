@@ -1,11 +1,12 @@
-# PyTwitter
-Facilitate the use of the Twitter API
+# PyTwitterSDK
+A Python SDK for the [API Twitter](https://developer.twitter.com/en). 
 
 The [Twitter API](https://developer.twitter.com/en/docs) has several features. You can take a look and suggest implementing some functionality in the library.
+It can be either a feature of the twitter API or even a feature that you think is important, one that you've used a lot and want an easier way to use.
 
 ### Install:
 
-The library is not yet to be downloaded via `pip` or another python package manager. But it can be used as follows:
+The library is not yet to be downloaded via `pip`(yet) or another python package manager. But it can be used as follows:
 
 #### Import the library:
 
