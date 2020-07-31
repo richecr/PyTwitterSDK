@@ -1,6 +1,3 @@
-import urllib.parse
-from requests_oauthlib import OAuth1
-from .constants import api
 from .utils import ParamsUtils
 from .utils.API import API
 
