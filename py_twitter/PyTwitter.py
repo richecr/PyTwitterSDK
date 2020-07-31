@@ -173,7 +173,7 @@ class PyTwitter:
         tweets = response['result']['places']
         return tweets
 
-    def get_followers(self, user_id, **kwargs):
+    def get_followers(self, **kwargs):
         """
         Method that fetches a user's followers.
 
@@ -182,6 +182,9 @@ class PyTwitter:
         user_id : String
 
             - ID of user.
+        screen_name: String
+
+            - The screen name of the user for whom to return results.
         cursor : String
 
             - For results to be divided into pages.
@@ -201,6 +204,8 @@ class PyTwitter:
 
             - List of users(followers).
         """
+        user_id = kwargs.get('user_id', '')
+        screen_name = kwargs.get('screen_name', '')
         cursor = kwargs.get('cursor', -1)
         count = kwargs.get('count', 20)
         skip_status = kwargs.get('skip_status', '')
@@ -208,6 +213,7 @@ class PyTwitter:
 
         params = {
             'user_id': user_id,
+            'screen_name': screen_name,
             'cursor': cursor,
             'count': count,
             'skip_status': ParamsUtils.format_params_booleans(skip_status),
