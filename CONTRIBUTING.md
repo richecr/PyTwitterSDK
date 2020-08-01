@@ -13,7 +13,7 @@ Did you look at the application and think about some functionality that should b
 
 ## Open issue:
 
-On the [project](https://github.com/Rickecr/PyTwitter) page, you can click on the `Issues` button and a`new issue` button will appear on the page, then just select and follow the following steps:
+On the [project](https://github.com/richecr/PyTwitter) page, you can click on the `Issues` button and a`new issue` button will appear on the page, then just select and follow the following steps:
 
 - Select the type of your issue: `Bug ou Feature`.
 - Give your issue a good name
@@ -24,7 +24,7 @@ On the [project](https://github.com/Rickecr/PyTwitter) page, you can click on th
 
 ## Clone the repository:
 
-On the home page of the [repository](https://github.com/Rickecr/PyTwitter) there is a `Fork` button. When you click, just wait to complete the fork. And then it will create the repository in your account. And now just clone in your machine, this:
+On the home page of the [repository](https://github.com/richecr/PyTwitter) there is a `Fork` button. When you click, just wait to complete the fork. And then it will create the repository in your account. And now just clone in your machine, this:
 
 ```sh
 git clone https://github.com/<name_user>/PyTwitter
@@ -82,4 +82,4 @@ On your fork page, a yellow message will appear asking you to make a Pull reques
 
 - Describe your changes.
 
-- Wait by evaluation of your PR, and it may happen that we ask for some changes to be made. 
+- Wait by evaluation of your PR, and it may happen that we ask for some changes to be made.

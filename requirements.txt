@@ -1,4 +1,0 @@
-urllib
-json
-requests
-requests_oauthlib
