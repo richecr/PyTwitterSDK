@@ -1,6 +1,5 @@
 from py_twitter import PyTwitter
 import json
-import requests
 
 with open('keys.json', 'r') as json_file:
     keys = json.load(json_file)
