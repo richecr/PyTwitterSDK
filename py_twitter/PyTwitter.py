@@ -1,6 +1,8 @@
-from typing import List
+from typing import Union, List
 from .utils.API import API
 from .utils import ParamsUtils
+import json
+import csv
 
 
 class PyTwitter:
@@ -278,3 +280,63 @@ class PyTwitter:
         response = self.api.get('geo/search.json', params)
         tweets = response['result']['places']
         return tweets
+
+    def write_tweets(self, tweets: Union[List[str], List[dict]], file_name: str, file_format: str):
+        """
+        Method that writes a list of twitter ids or tweets dict into json or csv file.
+
+        Params:
+        ----------
+        `tweets (List[str]) or (List[dict]):` TweetsId or TweetsDictionary.
+
+        `file_name (str):` the name of the outputed file.
+
+        `file_format (str):` should be csv or json
+        
+        """
+        if type(tweets[0]) == str:
+            tweets = self.show_lookup(tweets)
+        if file_format == 'json':
+            file = open(file_name + '.json', 'w')
+            json.dump(tweets, file, indent=4)
+            file.close()
+        elif file_format == 'csv':
+            keys = ['created_at', 'id_str', 'full_text', ['entities', 'hashtags'],
+                        'lang', ['user', 'id_str', 'screen_name', 'location'],
+                        'retweet_count', 'favorite_count', 'coordinates']
+            converted_tweets = []
+            for tweet in tweets:
+                converted_tweets.append(self.__selected_keys(keys, tweet))
+
+            with open(file_name + '.csv', 'w') as f:
+                writer = csv.DictWriter(f, fieldnames=converted_tweets[0])
+                writer.writeheader()
+                writer.writerows(converted_tweets)
+
+    def __selected_keys(self, keys:Union[str, list], tweet:dict, key_complement: str = ''):
+        """
+        Method that writes a list of twitter ids or tweets dict into json or csv file.
+
+        Params:
+        ----------
+        `keys (str) or (list):` tweet dict key  or tweet list of dict keys.
+
+        `tweet (dict):` tweet dict to be filtered.
+
+        `key_complement (str):` key to be added before the key name: complement_key.
+        
+        Return:
+        ----------
+        `tweet_dict (dict)`: tweet dict filtered with only the selected keys. 
+        """
+        tweet_dict = {}
+        for key in keys:      
+            if type(key) == str:
+                tweet_dict[key_complement + key] = tweet[key] 
+            elif type(key) == list:
+                for sub_key in range(1, len(key)):
+                    if type(key[sub_key]) == list:
+                        tweet_dict.update(self.__selected_keys([key[sub_key]], tweet[key[0]], key_complement + key[0] + '_'))
+                    else:
+                        tweet_dict['{0}{1}_{2}'.format(key_complement, key[0], key[sub_key])] = tweet[key[0]][key[sub_key]]
+        return tweet_dict
