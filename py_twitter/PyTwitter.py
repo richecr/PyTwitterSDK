@@ -281,7 +281,7 @@ class PyTwitter:
         tweets = response['result']['places']
         return tweets
 
-    def write_tweets(self, tweets: Union[List[str], List[dict]], file_name: str, file_format: str):
+    def write_tweets(self, tweets: list, file_name: str, file_format: str):
         """
         Method that writes a list of twitter ids or tweets dict into json or csv file.
 
@@ -313,7 +313,7 @@ class PyTwitter:
                 writer.writeheader()
                 writer.writerows(converted_tweets)
 
-    def __selected_keys(self, keys:Union[str, list], tweet:dict, key_complement: str = ''):
+    def __selected_keys(self, keys:Union[str, list], tweet, key_complement: str = ''):
         """
         Method that writes a list of twitter ids or tweets dict into json or csv file.
 
