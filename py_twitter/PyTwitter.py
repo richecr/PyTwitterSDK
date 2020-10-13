@@ -308,7 +308,7 @@ class PyTwitter:
             for tweet in tweets:
                 converted_tweets.append(self.__selected_keys(keys, tweet))
 
-            with open(file_name + '.csv', 'w') as f:
+            with open(file_name + '.csv', 'w', encoding="utf-8", newline="\n") as f:
                 writer = csv.DictWriter(f, fieldnames=converted_tweets[0])
                 writer.writeheader()
                 writer.writerows(converted_tweets)
