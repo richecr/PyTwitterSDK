@@ -73,7 +73,21 @@ print(tweets[0])
 
 ### Search for a specific tweet
 
-> TODO
+Get some specific tweet link like `https://twitter.com/caiqueocoelho/status/1261812973774962690`, 
+the number at the end of the url is the tweet id, get this id and use it in the show function
+
+```python
+from py_twitter import PyTwitter
+twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
+
+
+# Search for specific tweet
+tweets = twitter.show(id_tweet=1261812973774962690, tweet_mode='extended')
+
+# Print the tweet
+print(tweets)
+
+```
 
 ### Search for tweets from a specific location
 
@@ -85,7 +99,21 @@ print(tweets[0])
 
 ### Retweet a tweet
 
-> TODO
+Get some specific tweet link like `https://twitter.com/caiqueocoelho/status/1261812973774962690`, 
+the number at the end of the url is the tweet id, get this id and use it in the show function
+
+```python
+from py_twitter import PyTwitter
+twitter = PyTwitter(consumer_key, consumer_secret, token_key, token_secret)
+
+
+# Search for specific tweet
+response = twitter.retweet(id_tweet=1320040821631176707)
+
+# Print repose to see if retweet was with success
+print(response)
+
+```
 
 ## Contributing:
 
